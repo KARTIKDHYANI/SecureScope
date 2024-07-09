@@ -1,0 +1,26 @@
+{% extends "dashboard.html" %}
+
+{% block main %}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Timestamp</th>
+            <th>Image</th>
+            <th>Additional info</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for person in object_list %}
+        <tr>
+            <td>{{ person.name }}</td>
+            <td>{{ person.timestamp }}</td>
+            <td><img src="{{ person.image.url }}" alt="{{ person.name }}" width="100" height="100"></td>
+            <td>{{ person.additional_info }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

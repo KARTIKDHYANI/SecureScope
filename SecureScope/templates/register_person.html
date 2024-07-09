@@ -1,0 +1,13 @@
+{% extends "dashboard.html" %}
+
+{% block main %}
+<h2>Register Person</h2><br>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if error_message %}
+    <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

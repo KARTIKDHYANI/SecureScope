@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureScope</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'responsive.css' %}">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logosec">
+            <div class="logo">SecureScope</div>
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
+                class="icn menuicn" id="menuicn" alt="menu-icon">
+        </div>
+
+        
+    </header>
+
+    
+
+    <!-- Main content -->
+    <div class="main-container" >
+        <!-- Navigation -->
+    <div class="navcontainer">
+        <nav class="nav">
+            <div class="nav-upper-options">
+                <div class="nav-option option1"  onclick="location.href='/'">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
+                        class="nav-img" alt="dashboard">
+                    <h3> Dashboard</h3>
+                </div>
+
+                <div class="option2 nav-option" onclick="location.href='/register_person'">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
+                        class="nav-img" alt="articles">
+                    <h3>Register Face</h3>
+                </div>
+
+                <div class="nav-option option3" onclick="location.href='/person_records'">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
+                        class="nav-img" alt="report" >
+                    <h3> Person Records</h3>
+                </div>
+
+                
+
+            </div>
+        </nav>
+    </div>
+    <div>
+        {% block main %}
+        {% endblock %}
+    </div>
+    </div>
+
+    <script src="{% static 'index.js' %}"></script>
+</body>
+
+</html>
