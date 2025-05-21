@@ -6,3 +6,4 @@ face_recognition
 Pillow
 deepface
 dlib
+python-decouple
