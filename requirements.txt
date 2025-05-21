@@ -1,0 +1,8 @@
+Django
+opencv-python
+pyrebase4
+numpy
+face_recognition
+Pillow
+deepface
+dlib
