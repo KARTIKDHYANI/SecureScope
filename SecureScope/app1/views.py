@@ -162,7 +162,7 @@ def register_person(request):
                             # Analyze using DeepFace
                             analysis = DeepFace.analyze(np_image, actions=['age', 'gender', 'race'], enforce_detection=False)
                             data={form.cleaned_data['name']:analysis}
-                            database.push(data)
+                            database.child('Data').push(data)
                             additional_info=analysis
                         except Exception as e:
                             print(e)
