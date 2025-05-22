@@ -74,6 +74,7 @@
 
 To get started with **SecureScope**, follow these steps:
 
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/KARTIKDHYANI/SecureScope.git
@@ -92,14 +93,40 @@ source env/bin/activate
 
 # 5. Install required dependencies
 pip install -r requirements.txt
+```
 
-# 6. Run database migrations
+---
+
+### 🔐 6. Configure Firebase Credentials
+
+Create a `.env` file in the root of the project and add your Firebase credentials:
+
+```env
+FIREBASE_API_KEY=your_api_key
+FIREBASE_AUTH_DOMAIN=your_project_id.firebaseapp.com
+FIREBASE_DATABASE_URL=https://your_project_id.firebaseio.com
+FIREBASE_PROJECT_ID=your_project_id
+FIREBASE_STORAGE_BUCKET=your_project_id.appspot.com
+FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+FIREBASE_APP_ID=your_app_id
+FIREBASE_MEASUREMENT_ID=your_measurement_id
+```
+
+> ⚠️ **Important:** Never commit your `.env` file to version control.
+> Make sure to add `.env` to your `.gitignore` file to keep your credentials safe.
+
+---
+
+```bash
+# 7. Run database migrations
 python manage.py makemigrations
 python manage.py migrate
 
-# 7. Start the Django development server
+# 8. Start the Django development server
 python manage.py runserver
 ```
+
+
 
 Once the server is running, open your browser and go to [http://127.0.0.1:8000](http://127.0.0.1:8000) to access the application.
 
