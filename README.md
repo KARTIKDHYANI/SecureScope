@@ -99,7 +99,7 @@ pip install -r requirements.txt
 
 ### 🔐 6. Configure Firebase Credentials
 
-Create a `.env` file in the root of the project and add your Firebase credentials:
+Update the `.env` file in the root of the project and add your Firebase credentials:
 
 ```env
 FIREBASE_API_KEY=your_api_key
